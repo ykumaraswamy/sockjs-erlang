@@ -37,6 +37,7 @@
 -spec init() -> ok.
 init() ->
     _ = ets:new(?ETS, [public, named_table]),
+   io:format("Testing a commit"),
     ok.
 
 -spec start_link(session_or_undefined(), service(), info()) -> {ok, pid()}.
